@@ -5,3 +5,6 @@ def count_bulls(nums, nums_input):
         if nums_input[i] == nums[i]:
             bulls += 1
     return bulls
+
+def count_bulls(nums, nums_input):
+    pass

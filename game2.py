@@ -6,5 +6,5 @@ def count_bulls(nums, nums_input):
             bulls += 1
     return bulls
 
-def count_bulls(nums, nums_input):
+def count_cows(nums, nums_input):
     pass

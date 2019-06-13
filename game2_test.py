@@ -11,7 +11,7 @@ class CountCowsAndBullsTest(unittest.TestCase):
 
     def test_count_cows(self):
         self.assertIsInstance(game2.count_cows([1,2,3], [2,5,3]), int)
-
+        self.assertEqual(game2.count_cows([1,2,3], [2,5,3]), 1)
 
 
 

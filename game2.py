@@ -8,5 +8,7 @@ def count_bulls(nums, nums_input):
 
 def count_cows(nums, nums_input):
     cows = 0
-
+    for i in range(len(nums_input)):
+        if (nums_input[i] != nums[i]) and (nums_input[i] in nums):
+            cows += 1  
     return cows

@@ -7,4 +7,6 @@ def count_bulls(nums, nums_input):
     return bulls
 
 def count_cows(nums, nums_input):
-    pass
+    cows = 0
+
+    return cows

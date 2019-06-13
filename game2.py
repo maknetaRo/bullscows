@@ -1,3 +1,5 @@
 
 def count_bulls(nums, nums_input):
-    pass
+    bulls = 0
+
+    return bulls

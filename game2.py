@@ -39,11 +39,26 @@ def get_input(random_elements):
             secret_guesses.append(elem)
     return secret_guesses
 
-def play_game(secret_guesses):
 
-    for elem in range(7):
-        get_input(secret_guesses)
-        cows = count_cows(random_elements, secret_guesses)
-        bulls = count_bulls(random_elements, secret_guesses)
-        print("Your elements are: {}".format(secret_guesses))
+
+def play_game(random_elements):
+    elements = random_elements
+
+    for elem in range(2):
+        elements_input = get_input(elements)
+        cows = count_cows(elements, elements_input)
+        bulls = count_bulls(elements, elements_input)
+        print("Your elements are: {}".format(elements_input))
         print("Bulls: {}, cows: {}.".format(bulls, cows))
+        if bulls == len(elements):
+            print("You won!. ")
+
+random_elements = random_elements()
+play_game(random_elements)
+
+# def play_again():
+#     play_again = input("Play again: y/n")
+#     while play_again == 'y':
+#         play_game(random_elements)
+#
+# play_again()

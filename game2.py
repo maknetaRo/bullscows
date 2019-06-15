@@ -1,4 +1,4 @@
-from random import randrange, randint, choice, sample
+from random import  randint, choice
 
 def random_elements():
     number = randint(3, 9)
@@ -40,11 +40,10 @@ def get_input(random_elements):
     return secret_guesses
 
 
-
 def play_game(random_elements):
     elements = random_elements
 
-    for elem in range(2):
+    for elem in range(7):
         elements_input = get_input(elements)
         cows = count_cows(elements, elements_input)
         bulls = count_bulls(elements, elements_input)
@@ -53,12 +52,9 @@ def play_game(random_elements):
         if bulls == len(elements):
             print("You won!. ")
 
-random_elements = random_elements()
-play_game(random_elements)
+while True:
 
-# def play_again():
-#     play_again = input("Play again: y/n")
-#     while play_again == 'y':
-#         play_game(random_elements)
-#
-# play_again()
+    play_game(random_elements())
+    print("Do you want to play again? (y/n)")
+    if not input().lower() == "y":
+        break
